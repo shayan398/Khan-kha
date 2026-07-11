@@ -1,0 +1,123 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+background:linear-gradient(-45deg,#ff4d6d,#ff758f,#ffb3c6,#ffd6e0);
+background-size:400% 400%;
+animation:bg 10s ease infinite;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.container{
+width:90%;
+max-width:700px;
+padding:30px;
+text-align:center;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(15px);
+border-radius:25px;
+box-shadow:0 0 35px rgba(255,255,255,.4);
+color:#fff;
+animation:zoom 1.5s;
+}
+
+@keyframes zoom{
+from{transform:scale(.7);opacity:0;}
+to{transform:scale(1);opacity:1;}
+}
+
+h1{
+font-family:'Great Vibes',cursive;
+font-size:55px;
+color:#fff;
+text-shadow:0 0 20px #ff0055;
+}
+
+h2{
+margin:15px 0;
+font-size:28px;
+}
+
+.message{
+font-size:18px;
+line-height:1.8;
+margin:20px 0;
+}
+
+.proposal{
+font-size:35px;
+color:yellow;
+animation:glow 1s infinite alternate;
+}
+
+@keyframes glow{
+from{text-shadow:0 0 10px yellow;}
+to{text-shadow:0 0 30px orange;}
+}
+
+button{
+padding:15px 35px;
+border:none;
+border-radius:40px;
+font-size:20px;
+margin:15px;
+cursor:pointer;
+transition:.3s;
+}
+
+.yes{
+background:#ff0055;
+color:#fff;
+}
+
+.yes:hover{
+transform:scale(1.1);
+}
+
+.no{
+background:#fff;
+color:#ff0055;
+position:relative;
+}
+
+.name{
+margin-top:30px;
+font-family:'Great Vibes',cursive;
+font-size:35px;
+}
+
+#result{
+margin-top:20px;
+font-size:28px;
+color:yellow;
+font-weight:bold;
+}
+
+.hearts::before{
+content:"❤️ 💖 🌹 ❤️ 💕 🌸 💗";
+position:absolute;
+width:100%;
+top:-20px;
+left:0;
+font-size:35px;
+animation:fall 10s linear infinite;
+}
+
+@keyframes fall{
+0%{transform:translateY(-100px);}
+100%{transform:translateY(100vh);}
+}
